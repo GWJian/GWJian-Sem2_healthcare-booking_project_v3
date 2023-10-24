@@ -1,6 +1,8 @@
 client npm run dev
 server npm start
 ----------------------------------------------
+fix gmail key,remove chatting
+
 change my home page UI design.
 
 appointment status pendeng red,accpeted green color.
