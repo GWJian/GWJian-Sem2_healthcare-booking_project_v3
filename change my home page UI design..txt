@@ -1,10 +1,13 @@
 client npm run dev
 server npm start
 ----------------------------------------------
-fix gmail key,remove chatting
+fix gmail key,socket.io disable
+
+fix appointment status,
+if status is accpeted show you cant make appointment.
+if status is declined show you can make appointment.
 
 change my home page UI design.
 
 appointment status pendeng red,accpeted green color.
 
-socket.io,reach 1 to 1 chatting,or disable
