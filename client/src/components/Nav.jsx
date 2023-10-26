@@ -69,7 +69,12 @@ export default function Nav() {
               {auth && (
                 <>
                   <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item>
+                  {/* <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item> */}
+
+                  {(user?.role === "customer" || user?.role === "admin") && (
+                    <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item>
+                  )}
+
                   <Dropdown.Item href="/chat">Chat</Dropdown.Item>
 
                   {user?.role === "admin" && (
