@@ -75,7 +75,7 @@ export default function Nav() {
                     <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item>
                   )}
 
-                  <Dropdown.Item href="/chat">Chat</Dropdown.Item>
+                  {/* <Dropdown.Item href="/chat">Chat</Dropdown.Item> */}
 
                   {user?.role === "admin" && (
                     <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
