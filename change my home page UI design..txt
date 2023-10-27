@@ -1,7 +1,8 @@
 client npm run dev
 server npm start
 ----------------------------------------------
-fix gmail key,socket.io disable
+fix gmail key -done
+socket.io disable
 
 fix appointment status,
 if status is accpeted show you cant make appointment.
