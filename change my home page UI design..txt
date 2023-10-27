@@ -8,6 +8,10 @@ if status is accpeted show you cant make appointment.
 if status is declined show you can make appointment.
 
 change my home page UI design.
+https://metroperdanadental.com/jelutong-penang/?gclid=CjwKCAjwnOipBhBQEiwACyGLutJNIMC28aRxrx5PmXlOKGMvYkmdTPwBQOZzMn3Xf6eL7i5YmrRzvhoCGD4QAvD_BwE
+https://www.villagedentaldtc.com/
+-add section to show sign up now or make appointment now.
+-add google map
 
 appointment status pendeng red,accpeted green color.
 
