@@ -122,7 +122,16 @@ export default function Appoiment() {
 
                 {/* =================== Select Status Start ===================    */}
 
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td
+                  className={`px-6 py-4 whitespace-nowrap rounded-md block text-center font-medium mt-2
+                  ${
+                    item.status === "accepted"
+                      ? "bg-green-500 text-black"
+                      : item.status === "cancelled"
+                      ? "bg-red-500 text-black"
+                      : "bg-yellow-500 text-black"
+                  }`}
+                >
                   {editModes[item._id] ? (
                     <select
                       className="block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"

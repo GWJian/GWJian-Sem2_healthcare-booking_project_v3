@@ -175,8 +175,16 @@ export default function Appoimentmanagement() {
                 <td className="px-6 py-4 whitespace-nowrap">{item?.time}</td>
 
                 {/* =================== Select Status Start ===================    */}
-
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td
+                  className={`px-6 py-4 whitespace-nowrap rounded-md block text-center font-medium mt-2
+                  ${
+                    item.status === "accepted"
+                      ? "bg-green-500 text-black"
+                      : item.status === "cancelled"
+                      ? "bg-red-500 text-black"
+                      : "bg-yellow-500 text-black"
+                  }`}
+                >
                   {editModes[item._id] ? (
                     <select
                       className="block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -227,12 +235,15 @@ export default function Appoimentmanagement() {
                           Edit
                         </button>
                       ) : null}
-                      <button
-                        onClick={() => handleDeleteMember(item._id)}
-                        className="inline-flex items-center justify-center px-4 py-2 text-white duration-150 font-medium bg-red-600 rounded-lg hover:bg-red-500 active:bg-red-700 md:text-sm"
-                      >
-                        Delete
-                      </button>
+
+                      {user?.role === "admin" && (
+                        <button
+                          onClick={() => handleDeleteMember(item._id)}
+                          className="inline-flex items-center justify-center px-4 py-2 text-white duration-150 font-medium bg-red-600 rounded-lg hover:bg-red-500 active:bg-red-700 md:text-sm"
+                        >
+                          Delete
+                        </button>
+                      )}
                     </div>
                   )}
                 </td>
