@@ -4,6 +4,7 @@ import { useQuery, useQueryClient, useMutation } from "react-query";
 import { getOverallRating, getAllRatings } from "@/pages/api/rating";
 import AddUpdateRating from "@/components/rating/AddUpdateRating";
 import localforage from "localforage";
+import Google_Map from "@/components/MapBox";
 
 export default function Home() {
   const [auth, setAuth] = useState(null);
@@ -38,14 +39,16 @@ export default function Home() {
 
   return (
     <section className="py-14">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="mt-3 text-gray-800 text-3xl font-extrabold sm:text-4xl">
+          Welcome to the HealthCare Center
+        </p>
+      </div>
+
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
         <div className="flex-1">
           <div className="max-w-lg">
             <h3 className="font-semibold text-indigo-600">HealthCare Center</h3>
-            <p className="mt-3 text-gray-800 text-3xl font-extrabold sm:text-4xl">
-              Welcome to the HealthCare Center
-            </p>
-
             <h1>All Ratings: {overallRatingData?.overallRating}</h1>
             <ReactStars
               count={5} // Number of stars
@@ -55,34 +58,44 @@ export default function Home() {
               value={overallRatingData?.overallRating} // Set the initial rating value
             />
 
-            <address className="mt-6 text-gray-700">
-              2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang
-            </address>
             <div> {auth && <AddUpdateRating />}</div>
+
+            <div className="flex-1 mt-12 md:mt-0">
+              <ul
+                className="space-y-4 divide-y overflow-y-auto"
+                style={{ maxHeight: "400px" }}
+              >
+                {/* The maxHeight style is optional and sets a maximum height for the list */}
+                {ratingsData?.ratings.map((item) => (
+                  <li className="py-5" key={item._id}>
+                    <summary className="flex items-center justify-between font-semibold text-gray-700">
+                      {item.customer.username}
+                    </summary>
+                    <p className="mt-3 text-gray-600 leading-relaxed">
+                      Ratings: {item.rating}
+                      <ReactStars
+                        count={5} // Number of stars
+                        size={30} // Size of stars
+                        activeColor="#ffd700" // Color of active (filled) stars
+                        edit={false} // Make the stars read-only
+                        value={item.rating} // Set the initial rating value
+                      />
+                    </p>
+                    {/* Display the AddUpdateRating component only if the user is authenticated and the rating belongs to the current user */}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="flex-1 mt-12 md:mt-0">
-          <ul className="space-y-4 divide-y">
-            {ratingsData?.ratings.map((item) => (
-              <li className="py-5" key={item._id}>
-                <summary className="flex items-center justify-between font-semibold text-gray-700">
-                  {item.customer.username}
-                </summary>
-                <p className="mt-3 text-gray-600 leading-relaxed">
-                  Ratings: {item.rating}
-                  <ReactStars
-                    count={5} // Number of stars
-                    size={30} // Size of stars
-                    activeColor="#ffd700" // Color of active (filled) stars
-                    edit={false} // Make the stars read-only
-                    value={item.rating} // Set the initial rating value
-                  />
-                </p>
-                {/* Display the AddUpdateRating component only if the user is authenticated and the rating belongs to the current user */}
-              </li>
-            ))}
-          </ul>
+        <div className="flex-1">
+          <address className="mt-6 text-gray-700">
+            2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang
+          </address>
+          <div className="mt-6">
+            <Google_Map />
+          </div>
         </div>
       </div>
     </section>
