@@ -1,5 +1,6 @@
 client npm run dev
 server npm start
+(CTRL) + SHIFT + P -> Workspaces: Duplicate As Workspace in New Window
 ----------------------------------------------
 fix gmail key -done
 socket.io disable
