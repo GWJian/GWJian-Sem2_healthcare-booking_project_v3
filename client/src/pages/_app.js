@@ -19,8 +19,9 @@ export default function App({ Component, pageProps }) {
       <div className="flex flex-col min-h-screen">
         <Nav />
         <Component {...pageProps} />
-        <div className="flex-grow"></div>
-        <DefaultFooter />
+        <div className="mt-48">
+          <DefaultFooter />
+        </div>
       </div>
     </QueryClientProvider>
   );

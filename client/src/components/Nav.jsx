@@ -103,9 +103,9 @@ export default function Nav() {
               <Button color="ghost" href="/login">
                 Login
               </Button>
-              <Button color="ghost" href="/register">
+              {/* <Button color="ghost" href="/register">
                 Register
-              </Button>
+              </Button> */}
             </>
           ) : (
             <>

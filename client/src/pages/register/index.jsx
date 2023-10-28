@@ -92,6 +92,18 @@ export default function Register() {
             />
           </div>
           <Button className="block w-full">Register</Button>
+
+          <div className="row mt-5">
+            <p className="text-gray-900 text-lg font-medium">
+              Have An Account?
+              <a
+                href="/login"
+                className="text-red-500 hover:underline font-medium"
+              >
+                Login Now
+              </a>
+            </p>
+          </div>
         </form>
       </div>
     </div>

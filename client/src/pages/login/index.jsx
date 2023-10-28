@@ -61,14 +61,17 @@ export default function Login() {
 
           <Button className="block w-full">Login</Button>
 
-          {/* <Button
-            //blue button
-            className="block w-full mt-5"
-            color="primary"
-            onClick={() => signIn()}
-          >
-            Google
-          </Button> */}
+          <div className="row mt-5">
+            <p className="text-gray-900 text-lg font-medium">
+              Don't have an account yet?
+              <a
+                href="/register"
+                className="text-red-500 hover:underline font-medium"
+              >
+                Register
+              </a>
+            </p>
+          </div>
         </form>
       </div>
     </div>
