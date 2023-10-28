@@ -126,10 +126,10 @@ export default function Appoiment() {
                   className={`px-6 py-4 whitespace-nowrap rounded-md block text-center font-medium mt-2
                   ${
                     item.status === "accepted"
-                      ? "bg-green-500 text-black"
+                      ? "bg-green-500 text-gray-700"
                       : item.status === "cancelled"
-                      ? "bg-red-500 text-black"
-                      : "bg-yellow-500 text-black"
+                      ? "bg-red-500 text-gray-700"
+                      : "border-2 border-yellow-300 text-gray-700"
                   }`}
                 >
                   {editModes[item._id] ? (

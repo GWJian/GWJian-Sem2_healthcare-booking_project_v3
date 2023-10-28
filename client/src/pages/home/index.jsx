@@ -5,6 +5,8 @@ import { getOverallRating, getAllRatings } from "@/pages/api/rating";
 import AddUpdateRating from "@/components/rating/AddUpdateRating";
 import localforage from "localforage";
 import Google_Map from "@/components/MapBox";
+import { IconMap2, IconClockHour2 } from "@tabler/icons-react";
+import CardWithDecorativeImage from "@/components/Card";
 
 export default function Home() {
   const [auth, setAuth] = useState(null);
@@ -38,11 +40,9 @@ export default function Home() {
   // ======== Fetch all ratings end ==========
 
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="mt-3 text-gray-800 text-3xl font-extrabold sm:text-4xl">
-          Welcome to the HealthCare Center
-        </p>
+    <section>
+      <div className="mx-20 my-24 ">
+        <CardWithDecorativeImage />
       </div>
 
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
@@ -90,10 +90,33 @@ export default function Home() {
         </div>
 
         <div className="flex-1">
-          <address className="mt-6 text-gray-700">
-            2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang
-          </address>
-          <div className="mt-6">
+          <p className="font-semibold text-2xl text-indigo-600">Visit Us</p>
+          <p className="mt-3 text-gray-600 leading-relaxed font-bold">
+            We're conveniently located in the heart of George Town, Penang.Find
+            us at 2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang.
+          </p>
+
+          <div
+            className="mt-5"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <IconMap2 size={50} />
+            <p style={{ marginLeft: "10px" }}>
+              2, LEBUH ACHEH, GEORGE TOWN, 10300 GEORGE TOWN, PULAU PINANG
+            </p>
+          </div>
+
+          <div
+            className="mt-5"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <IconClockHour2 size={50} />
+            <p style={{ marginLeft: "10px" }}>
+              Monday - Friday: 8:30 AM - 5:30 PM
+            </p>
+          </div>
+
+          <div className="my-5">
             <Google_Map />
           </div>
         </div>
