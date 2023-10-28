@@ -3,11 +3,10 @@ server npm start
 (CTRL) + SHIFT + P -> Workspaces: Duplicate As Workspace in New Window
 ----------------------------------------------
 fix gmail key -done
-socket.io disable
+socket.io disable -done
 
 fix appointment status,
 if status is accpeted show you cant make appointment.
-if status is declined show you can make appointment.
 
 change my home page UI design.
 https://metroperdanadental.com/jelutong-penang/?gclid=CjwKCAjwnOipBhBQEiwACyGLutJNIMC28aRxrx5PmXlOKGMvYkmdTPwBQOZzMn3Xf6eL7i5YmrRzvhoCGD4QAvD_BwE

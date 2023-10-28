@@ -89,13 +89,14 @@ export default function UserCreateAppoitment({ onClose }) {
     value: appointment.time,
     name: appointment.doctor.name,
     doctorId: appointment.doctor._id,
+    date: appointment.date.split("T")[0],
   }));
-
-  // console.log(optionsAppointments);
+  //console.log(optionsAppointments);
 
   const isTimeDisabled = optionsAppointments?.some(
     (appointment) =>
       appointment.value === value &&
+      appointment.date === selectedDate.toISOString().split("T")[0] &&
       selectedDoctor &&
       appointment.doctorId === selectedDoctor.value
   );
@@ -130,6 +131,7 @@ export default function UserCreateAppoitment({ onClose }) {
           <div className="mb-4">
             <p>Date</p>
             <DatePicker
+              minDate={new Date()}
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
             />
