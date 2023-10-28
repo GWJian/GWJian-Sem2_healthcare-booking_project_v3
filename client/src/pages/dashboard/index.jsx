@@ -78,12 +78,15 @@ export default function Dashboard() {
   // ================= Delete Member End =================
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-8 pt-20 ">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-8 pt-20 mb-48">
       <div className="items-start justify-between md:flex">
         <div className="max-w-lg">
           <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
             Dashboard
           </h3>
+          <p className="text-gray-600 mt-2">
+            This is the dashboard page. You can manage your members here.
+          </p>
         </div>
 
         {/* ================= Add Member Start =================  */}
@@ -103,14 +106,18 @@ export default function Dashboard() {
           <thead className="bg-gray-50 text-gray-600 font-medium border-b">
             <tr>
               <th className="py-3 px-6">Name</th>
+              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Username</th>
+              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Role</th>
               <th className="py-3 px-6"></th>
             </tr>
           </thead>
           {/* ================= Table Header End =================  */}
 
-          <tbody className="text-gray-600 divide-y">
+          <tbody className="text-gray-600 divide-y bg-gray-100">
             {/* ================= Table Item Start =================  */}
             {data?.map((item, idx) => (
               <tr key={idx}>
@@ -124,7 +131,11 @@ export default function Dashboard() {
                     </span>
                   </div>
                 </td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">{item.username}</td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">{item.role}</td>
                 <td className="text-right px-6 whitespace-nowrap">
                   {/* ================= Edit Button Start =================  */}
