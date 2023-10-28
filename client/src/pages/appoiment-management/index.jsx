@@ -158,7 +158,7 @@ export default function Appoimentmanagement() {
             </tr>
           </thead>
 
-          <tbody className="text-gray-600 divide-y">
+          <tbody className="text-gray-600 divide-y bg-gray-100">
             {data?.map((item) => (
               <tr key={item._id}>
                 <td className="px-6 py-4 whitespace-nowrap">

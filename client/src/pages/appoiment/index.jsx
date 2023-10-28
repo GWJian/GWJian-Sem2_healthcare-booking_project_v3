@@ -78,7 +78,7 @@ export default function Appoiment() {
   // ================= Create Appoiment End =================
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-8 mb-48">
       <div className="items-start justify-between md:flex">
         <div className="max-w-lg">
           <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
@@ -103,22 +103,34 @@ export default function Appoiment() {
           <thead className="bg-gray-50 text-gray-600 font-medium border-b">
             <tr>
               <th className="py-3 px-6">Doctor</th>
+              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Date</th>
+              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Time</th>
+              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Status</th>
               <th className="py-3 px-6"></th>
             </tr>
           </thead>
-          <tbody className="text-gray-600 divide-y">
+          <tbody className="text-gray-600 divide-y bg-gray-100">
             {data?.map((item) => (
               <tr key={item._id}>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {item.doctor.username}
                 </td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <Moment format="YYYY/MM/DD">{item.date}</Moment>
                 </td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">{item.time}</td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
+                <td className="px-6 py-4 whitespace-nowrap"></td>
 
                 {/* =================== Select Status Start ===================    */}
 
