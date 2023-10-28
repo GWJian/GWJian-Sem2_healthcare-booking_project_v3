@@ -92,17 +92,19 @@ export default function AdminCreateAppoitment({ onClose }) {
     value: appointment.time,
     name: appointment.doctor.name,
     doctorId: appointment.doctor._id,
+    date: appointment.date.split("T")[0],
   }));
+  //console.log(optionsAppointments);
 
-  // console.log(optionsAppointments);
+  //if date and time already have accept appointment, then disable the time
 
   const isTimeDisabled = optionsAppointments.some(
     (appointment) =>
       appointment.value === value &&
+      appointment.date === startDate.toISOString().split("T")[0] &&
       selectedDoctor &&
       appointment.doctorId === selectedDoctor.value
   );
-
   //========== Get All Appointments  and TimeSetting End================
 
   return (
@@ -133,6 +135,7 @@ export default function AdminCreateAppoitment({ onClose }) {
           <div className="mb-4">
             <p>Date</p>
             <DatePicker
+              minDate={new Date()}
               selected={startDate}
               onChange={(date) => setStartDate(date)}
             />
