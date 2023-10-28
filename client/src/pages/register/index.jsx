@@ -95,7 +95,7 @@ export default function Register() {
 
           <div className="row mt-5">
             <p className="text-gray-900 text-lg font-medium">
-              Have An Account?
+              Have An Account?{" "}
               <a
                 href="/login"
                 className="text-red-500 hover:underline font-medium"

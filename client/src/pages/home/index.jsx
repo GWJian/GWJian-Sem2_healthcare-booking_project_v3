@@ -7,11 +7,12 @@ import localforage from "localforage";
 import Google_Map from "@/components/MapBox";
 import { IconMap2, IconClockHour2 } from "@tabler/icons-react";
 import CardWithDecorativeImage from "@/components/Card";
+import Header from "@/components/Header";
 
 export default function Home() {
+  //===== check is user login start =====
   const [auth, setAuth] = useState(null);
 
-  //===== check is user login start =====
   useEffect(() => {
     const getToken = async () => {
       const token = await localforage.getItem("token");
@@ -41,7 +42,14 @@ export default function Home() {
 
   return (
     <section>
+      <div>
+        <Header />
+      </div>
+
       <div className="mx-20 my-24 ">
+        <h2 className=" text-center xl:text-5xl lg:text-4xl sm:text-2xl font-bold mb-5">
+          Comprehensive care, one convenient location
+        </h2>
         <CardWithDecorativeImage />
       </div>
 
