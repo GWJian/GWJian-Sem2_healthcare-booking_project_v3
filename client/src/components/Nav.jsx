@@ -1,3 +1,5 @@
+//This is Nav Bar
+
 import { Navbar, Button, Dropdown } from "react-daisyui";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";

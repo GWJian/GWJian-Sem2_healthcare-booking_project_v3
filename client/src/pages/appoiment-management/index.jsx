@@ -122,7 +122,7 @@ export default function Appoimentmanagement() {
   // ================= Create Appoitment End =================
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-8 mb-48 ">
       <div className="items-start justify-between md:flex">
         <div className="max-w-lg">
           <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
@@ -157,6 +157,7 @@ export default function Appoimentmanagement() {
               <th className="py-3 px-6"></th>
             </tr>
           </thead>
+
           <tbody className="text-gray-600 divide-y">
             {data?.map((item) => (
               <tr key={item._id}>
@@ -182,7 +183,7 @@ export default function Appoimentmanagement() {
                       ? "bg-green-500 text-black"
                       : item.status === "cancelled"
                       ? "bg-red-500 text-black"
-                      : "bg-yellow-500 text-black"
+                      : "border-2 border-yellow-300 text-gray-700"
                   }`}
                 >
                   {editModes[item._id] ? (
@@ -247,7 +248,6 @@ export default function Appoimentmanagement() {
                     </div>
                   )}
                 </td>
-
                 {/* =================== Select Status End ===================     */}
               </tr>
             ))}

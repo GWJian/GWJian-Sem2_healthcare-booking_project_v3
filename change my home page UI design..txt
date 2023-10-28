@@ -17,3 +17,22 @@ https://www.villagedentaldtc.com/
 
 appointment status pendeng red,accpeted green color.
 
+bg video
+https://www.youtube.com/watch?v=lw7xIB0kPCo&ab_channel=Biteable
+
+login page
+copy facebook
+
+Appointment page
+color text change to single type
+bg change abit white
+fix table
+
+======================== LAST PART START ========================
+admin
+doctor
+only show appointment and profile,no need homepage and footer
+
+user
+only user can see footer and homepage
+======================== LAST PART END ========================
