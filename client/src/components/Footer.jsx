@@ -1,10 +1,9 @@
-// This is Footer
-
 import { Footer } from "flowbite-react";
 
 export default function FooterSitemapLinks() {
   return (
-    <Footer>
+    //footer color gray-700
+    <Footer className=" bg-gray-200 ">
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
           <div>
