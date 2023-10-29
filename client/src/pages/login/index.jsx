@@ -3,12 +3,41 @@ import { useState, useEffect } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { login } from "../api/user";
 import Swal from "sweetalert2";
+import localforage from "localforage";
 
 export default function Login() {
   const [user, setUser] = useState({
     username: "",
     password: "",
   });
+
+  //===== check is user login start =====
+  const [auth, setAuth] = useState(null);
+
+  useEffect(() => {
+    const getAuth = async () => {
+      const token = await localforage.getItem("token");
+      if (token) {
+        setAuth(token);
+      }
+    };
+    getAuth();
+  }, []);
+  //===== check is user login end =====
+
+  //===== check role is doctor =====
+  const [role, setRole] = useState(null);
+
+  useEffect(() => {
+    const getRole = async () => {
+      const user = await localforage.getItem("user");
+      if (user) {
+        setRole(user.role);
+      }
+    };
+    getRole();
+  }, []);
+  //===== check if role is doctor end =====
 
   const queryClient = useQueryClient();
 
@@ -24,7 +53,14 @@ export default function Login() {
         queryClient.invalidateQueries("token", data.token); //queryClient.invalidateQueries("token", data) 会触发useQuery里面的queryKey: ["token", data]重新执行
       }
 
-      window.location.href = "/"; // this will reload the page
+      // window.location.href = "/"; // this will reload the page
+      //======== if user is doctor, redirect to appoiment-management page start ========
+      if (data.user.role === "doctor") {
+        window.location.href = "/appoiment-management";
+      } else {
+        window.location.href = "/";
+      }
+      //======== if user is doctor, redirect to appoiment-management page end ========
     },
     onError: (error) => {
       Swal.fire("Failed to login", error.response.data.msg, "error");
