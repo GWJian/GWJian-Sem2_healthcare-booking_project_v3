@@ -6,25 +6,25 @@ fix gmail key -done
 socket.io disable -done
 
 fix appointment status,
-if status is accpeted show you cant make appointment.
+if status is accpeted show you cant make appointment. -done
 
 change my home page UI design.
 https://metroperdanadental.com/jelutong-penang/?gclid=CjwKCAjwnOipBhBQEiwACyGLutJNIMC28aRxrx5PmXlOKGMvYkmdTPwBQOZzMn3Xf6eL7i5YmrRzvhoCGD4QAvD_BwE
 https://www.villagedentaldtc.com/
--add section to show sign up now or make appointment now.
--add google map
+-add section to show sign up now or make appointment now. -done
+-add google map -done
 
-appointment status pendeng red,accpeted green color.
+appointment status pendeng red,accpeted green color. -done
 
 bg video
 https://www.youtube.com/watch?v=lw7xIB0kPCo&ab_channel=Biteable
 
 login page
-copy facebook
+copy facebook -half done
 
 Appointment page
 color text change to single type
-bg change abit white-done
+bg change abit white -done
 fix table -done
 
 ======================== LAST PART START ========================

@@ -8,6 +8,7 @@ import Google_Map from "@/components/MapBox";
 import { IconMap2, IconClockHour2 } from "@tabler/icons-react";
 import CardWithDecorativeImage from "@/components/Card";
 import Header from "@/components/Header";
+import Boarder from "@/components/Boarder";
 
 export default function Home() {
   //===== check is user login start =====
@@ -51,6 +52,10 @@ export default function Home() {
           Comprehensive care, one convenient location
         </h2>
         <CardWithDecorativeImage />
+      </div>
+
+      <div className="mx-20 my-24 ">
+        <Boarder />
       </div>
 
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
@@ -97,7 +102,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 sm:mt-8 md:mt-8 lg:mt-0">
           <p className="font-semibold text-2xl text-indigo-600">Visit Us</p>
           <p className="mt-3 text-gray-600 leading-relaxed font-bold">
             We're conveniently located in the heart of George Town, Penang.Find
