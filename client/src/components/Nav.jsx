@@ -64,25 +64,32 @@ export default function Nav() {
 
             {/* =================================Dropdown Menu Start ==================================== */}
             <Dropdown.Menu tabIndex={0} className="menu-compact w-52">
-              {/* everyone can see this page */}
-              <Dropdown.Item href="/">Homepage</Dropdown.Item>
+              {/* The Homepage link is visible to all users before they login */}
+              {!auth && <Dropdown.Item href="/">Homepage</Dropdown.Item>}
 
-              {/* only Login user can see this page Start*/}
+              {/* The following links are visible only to logged-in users */}
               {auth && (
                 <>
-                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                  {/* <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item> */}
+                  {/* The Homepage link is visible to all logged-in users except those with the role 'doctor' */}
+                  {user?.role !== "doctor" && (
+                    <Dropdown.Item href="/">Homepage</Dropdown.Item>
+                  )}
 
+                  <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+
+                  {/* The Appoiment link is visible to logged-in users with the role 'customer' or 'admin' */}
                   {(user?.role === "customer" || user?.role === "admin") && (
                     <Dropdown.Item href="/appoiment">Appoiment</Dropdown.Item>
                   )}
 
                   {/* <Dropdown.Item href="/chat">Chat</Dropdown.Item> */}
 
+                  {/* The Dashboard link is visible to logged-in users with the role 'admin' */}
                   {user?.role === "admin" && (
                     <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
                   )}
 
+                  {/* The Appointment Manage link is visible to logged-in users with the role 'doctor' or 'admin' */}
                   {(user?.role === "doctor" || user?.role === "admin") && (
                     <Dropdown.Item href="/appoiment-management">
                       Appointment Manage

@@ -34,7 +34,7 @@ export default function Header() {
       <div className="absolute inset-0 flex items-center justify-start lg:ms-36 ">
         <div className="flex flex-col">
           <h1 className="text-white text-2xl font-bold">
-            TRUSTED DENVER TECH CENTER DENTISTS
+            TRUSTED TECH CENTER DENTISTS
           </h1>
           <p className="text-white text-5xl">Exceptional care for all ages</p>
           <div>
