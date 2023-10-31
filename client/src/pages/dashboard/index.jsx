@@ -107,9 +107,7 @@ export default function Dashboard() {
             <tr>
               <th className="py-3 px-6">Name</th>
               <th className="py-3 px-6"></th>
-              <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Username</th>
-              <th className="py-3 px-6"></th>
               <th className="py-3 px-6"></th>
               <th className="py-3 px-6">Role</th>
               <th className="py-3 px-6"></th>
@@ -132,9 +130,7 @@ export default function Dashboard() {
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap"></td>
-                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">{item.username}</td>
-                <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap"></td>
                 <td className="px-6 py-4 whitespace-nowrap">{item.role}</td>
                 <td className="text-right px-6 whitespace-nowrap">

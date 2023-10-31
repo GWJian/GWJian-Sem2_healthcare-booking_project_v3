@@ -1,9 +1,9 @@
 import { Footer } from "flowbite-react";
 
 export default function FooterSitemapLinks() {
-  return (
-    //footer color gray-700
-    <Footer className=" bg-gray-200 fixed bottom-0 left-0">
+  return (  
+    <div className="flex flex-col h-[80vh] sm:h-[100vh] custom-375:h-[100vh]">
+    <Footer className=" bg-gray-200 mt-auto">
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
           <div>
@@ -46,5 +46,6 @@ export default function FooterSitemapLinks() {
         </div>
       </div>
     </Footer>
+    </div>
   );
 }
