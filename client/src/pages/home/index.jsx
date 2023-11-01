@@ -46,18 +46,16 @@ export default function Home() {
       <div>
         <Header />
       </div>
-
-      <div className="md:mx- mx-5 mt-5" >
-        <h2 className=" text-center xl:text-5xl lg:text-4xl sm:text-2xl font-bold mb-5">
+      <div className="m-20">
+        <h2 className="text-center xl:text-5xl lg:text-4xl sm:text-2xl font-bold mb-5">
           Comprehensive care, one convenient location
         </h2>
         <CardWithDecorativeImage />
-      </div>
-
-      <div className="mx-20 my-24 ">
+      </div>{" "}
+      *
+      <div className="m-20">
         <Boarder />
       </div>
-
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
         <div className="flex-1">
           <div className="max-w-lg">
@@ -74,11 +72,8 @@ export default function Home() {
             <div> {auth && <AddUpdateRating />}</div>
 
             <div className="flex-1 mt-12 md:mt-0">
-              <ul
-                className="space-y-4 divide-y overflow-y-auto"
-                style={{ maxHeight: "400px" }}
-              >
-                {/* The maxHeight style is optional and sets a maximum height for the list */}
+              <ul className="space-y-4 divide-y overflow-y-auto max-h-[400px]">
+                {/* The max-h-[400px] class sets a maximum height for the list */}
                 {ratingsData?.ratings.map((item) => (
                   <li className="py-5" key={item._id}>
                     <summary className="flex items-center justify-between font-semibold text-gray-700">
@@ -102,34 +97,26 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex-1 sm:mt-8 md:mt-8 lg:mt-0">
+        <div className="flex-1 sm:mt-8 lg:mt-0">
           <p className="font-semibold text-2xl text-indigo-600">Visit Us</p>
           <p className="mt-3 text-gray-600 leading-relaxed font-bold">
             We're conveniently located in the heart of George Town, Penang.Find
             us at 2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang.
           </p>
 
-          <div
-            className="mt-5"
-            style={{ display: "flex", alignItems: "center" }}
-          >
+          <div className="mt-5 flex items-center">
             <IconMap2 size={50} />
-            <p style={{ marginLeft: "10px" }}>
+            <p className="ml-2">
               2, LEBUH ACHEH, GEORGE TOWN, 10300 GEORGE TOWN, PULAU PINANG
             </p>
           </div>
 
-          <div
-            className="mt-5"
-            style={{ display: "flex", alignItems: "center" }}
-          >
+          <div className="mt-5 flex items-center">
             <IconClockHour2 size={50} />
-            <p style={{ marginLeft: "10px" }}>
-              Monday - Friday: 8:30 AM - 5:30 PM
-            </p>
+            <p className="ml-2">Monday - Friday: 8:30 AM - 5:30 PM</p>
           </div>
 
-          <div className="my-5">
+          <div className="mt-5 pb-32 ">
             <Google_Map />
           </div>
         </div>

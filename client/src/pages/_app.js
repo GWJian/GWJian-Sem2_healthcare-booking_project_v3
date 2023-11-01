@@ -47,8 +47,8 @@ export default function App({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
-        <Nav/>
-        <Component {...pageProps}/>
+        <Nav />
+        <Component {...pageProps} />
 
         {/* if doctor hide Footer */}
         {auth && auth.user.role === "doctor" ? null : <FooterSitemapLinks />}
