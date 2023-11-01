@@ -59,7 +59,7 @@ export default function Profile() {
   }
 
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 pt-20">
       <div className="sm:col-start-5 sm:col-span-4 col-span-10 col-start-2">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">

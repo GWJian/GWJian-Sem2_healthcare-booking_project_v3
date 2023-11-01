@@ -73,7 +73,7 @@ export default function Login() {
   };
 
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 pt-20 custom-375:pb-20 ">
       <div className="sm:col-start-5 sm:col-span-4 col-span-10 col-start-2">
         <form onSubmit={onSubmitHandler}>
           <div className="mb-4">

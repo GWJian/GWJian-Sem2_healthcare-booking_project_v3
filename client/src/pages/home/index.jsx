@@ -47,7 +47,7 @@ export default function Home() {
         <Header />
       </div>
 
-      <div className="mx-20 my-24 ">
+      <div className="md:mx- mx-5 mt-5" >
         <h2 className=" text-center xl:text-5xl lg:text-4xl sm:text-2xl font-bold mb-5">
           Comprehensive care, one convenient location
         </h2>

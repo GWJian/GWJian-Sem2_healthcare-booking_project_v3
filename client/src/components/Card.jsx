@@ -7,11 +7,11 @@ import Image4 from "../assets/Image4.jpg";
 
 export default function CardWithDecorativeImage() {
   return (
-    <div className="flex flex-col md:flex-row md:gap-4">
+    <div className="flex flex-col md:flex-row md:gap-4 mb-3">
       {/* need hlp for remove padding */}
-      <div className="hover:shadow-2xl mb-3">
-        <Card className="rounded-3xl">
-          <Image src={Image1} className="rounded-lg w-full h-80 object-cover" />
+
+        <Card className="rounded-3xl hover:shadow-2xl">
+          <Image src={Image1} className="rounded-lg w-full md:h-80 md:object-cover object-contain" />
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             General
           </h5>
@@ -20,11 +20,11 @@ export default function CardWithDecorativeImage() {
             are just the beginning.
           </p>
         </Card>
-      </div>
 
-      <div className="hover:shadow-2xl mb-3">
-        <Card className="rounded-3xl">
-          <Image src={Image2} className="rounded-lg w-full h-80 object-cover" />
+
+
+        <Card className="rounded-3xl hover:shadow-2xl">
+          <Image src={Image2} className="rounded-lg w-full md:h-80 md:object-cover object-contain" />
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Cosmetic
           </h5>
@@ -33,11 +33,11 @@ export default function CardWithDecorativeImage() {
             take-home teeth whitening.
           </p>
         </Card>
-      </div>
 
-      <div className="hover:shadow-2xl mb-3">
-        <Card className="rounded-3xl">
-          <Image src={Image3} className="rounded-lg w-full h-80 object-cover" />
+
+
+        <Card className="rounded-3xl hover:shadow-2xl">
+          <Image src={Image3} className="rounded-lg w-full md:h-80 md:object-cover object-contain" />
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Surgical
           </h5>
@@ -46,7 +46,7 @@ export default function CardWithDecorativeImage() {
             cutting-edge implants and more.
           </p>
         </Card>
-      </div>
+
     </div>
   );
 }
