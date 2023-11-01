@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import Nav from "@/components/Nav";
-import DefaultFooter from "@/components/Footer";
+import FooterSitemapLinks from "@/components/Footer";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
@@ -46,12 +46,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex flex-col min-h-screen">
-        <Nav />
-        <Component {...pageProps} />
+      <div>
+        <Nav/>
+        <Component {...pageProps}/>
 
-        {/* if doctor hide Defaultfooter */}
-        {auth && auth.user.role === "doctor" ? null : <DefaultFooter />}
+        {/* if doctor hide Footer */}
+        {auth && auth.user.role === "doctor" ? null : <FooterSitemapLinks />}
       </div>
     </QueryClientProvider>
   );
