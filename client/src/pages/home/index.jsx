@@ -46,17 +46,20 @@ export default function Home() {
       <div>
         <Header />
       </div>
+
       <div className="m-20">
         <h2 className="text-center xl:text-5xl lg:text-4xl sm:text-2xl font-bold mb-5">
           Comprehensive care, one convenient location
         </h2>
         <CardWithDecorativeImage />
-      </div>{" "}
-      *
+      </div>
+      
+
       <div className="m-20">
         <Boarder />
       </div>
-      <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
+
+<div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
         <div className="flex-1">
           <div className="max-w-lg">
             <h3 className="font-semibold text-indigo-600">HealthCare Center</h3>
@@ -121,6 +124,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+
+
+      
     </section>
   );
 }
