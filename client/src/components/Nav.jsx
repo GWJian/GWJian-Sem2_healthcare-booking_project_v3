@@ -43,7 +43,7 @@ export default function Nav() {
 
   return (
     <div>
-      <Navbar>
+      <Navbar >
         <Navbar.Toggle />
         <Navbar.Collapse>
           {!auth && <Navbar.Link href="/">Homepage</Navbar.Link>}

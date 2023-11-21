@@ -3,7 +3,7 @@ import { Footer } from "flowbite-react";
 export default function FooterSitemapLinks() {
   return (
     <div>
-      <footer class="bg-white dark:bg-gray-900">
+      <footer class="bg-white dark:bg-gray-900 lg:mt-15 mt-24">
         <div class="mx-auto bg-gray-200 ">
           <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 text-center ">
             <div>
