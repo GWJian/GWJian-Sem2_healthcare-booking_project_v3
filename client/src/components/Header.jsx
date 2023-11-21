@@ -24,31 +24,34 @@ export default function Header() {
     <div className="relative h-screen">
       <Image
         src={HeaderImg}
-        alt="Header"
+        alt="Detailed description of the image"
         layout="fill"
         objectFit="cover"
-        className=""
       />
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
-      <div className="absolute inset-0 flex items-center justify-start lg:ms-36 ">
+      <header className="absolute inset-0 flex items-center justify-start md:ms-28 custom-375:ms-5">
         <div className="flex flex-col">
           <h1 className="text-white text-2xl font-bold">
             TRUSTED TECH CENTER DENTISTS
           </h1>
-          <p className="text-white text-5xl">Exceptional care for all ages</p>
-          <div>
-            <Button pill color="warning" className="mt-5">
+          <p className="text-white text-3xl">Exceptional care for all ages</p>
+          <div className="mt-5">
+            <button className="rounded-full p-2 px-3 text-white bg-yellow-400 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600">
               {auth ? (
-                <Link href="/appoiment">Booking Now</Link>
+                <Link href="/appoiment" className="text-base">
+                  Booking Now
+                </Link>
               ) : (
-                <Link href="/login">Login</Link>
+                <Link href="/login" className="text-base">
+                  Login
+                </Link>
               )}
-            </Button>
+            </button>
           </div>
-          <p className="text-white text-2xl mt-5">OR CALL (000) XXX-XXXX</p>
+          <p className="text-white text-xl mt-5">OR CALL (000) XXX-XXXX</p>
         </div>
-      </div>
+      </header>
     </div>
   );
 }

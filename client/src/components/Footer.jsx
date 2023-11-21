@@ -1,51 +1,108 @@
 import { Footer } from "flowbite-react";
 
 export default function FooterSitemapLinks() {
-  return (  
-    <div className="flex flex-col h-[80vh] sm:h-[100vh] custom-375:h-[100vh]">
-    <Footer className=" bg-gray-200 mt-auto">
-      <div className="w-full">
-        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
-          <div>
-            <Footer.Title title="Company" />
-            <Footer.LinkGroup col>
-              <Footer.Link href="/">About</Footer.Link>
-              <Footer.Link href="/">Careers</Footer.Link>
-              <Footer.Link href="/">Brand Center</Footer.Link>
-            </Footer.LinkGroup>
+  return (
+    <div>
+      <footer class="bg-white dark:bg-gray-900 lg:mt-15 mt-24">
+        <div class="mx-auto bg-gray-200 ">
+          <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 text-center ">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Company
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class=" hover:underline">
+                    About
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">
+                    Careers
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">
+                    Brand Center
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Legal
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <text class="hover:underline">Privacy Policy</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">Terms of Service</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">Law Enforcement</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">Contact Us</text>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Contact us
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <text class="hover:underline">Phone: 000-000-0000</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">Email: xxxxx@gmail.com</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">
+                    Address: 2, Lebuh Acheh, George Town, 10300 George Town,
+                    Pulau Pinang
+                  </text>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Operating Hours:
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <text class="hover:underline">Monday - Friday</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">9:00 AM - 5:00 PM</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">Saturday - Sunday</text>
+                </li>
+                <li class="mb-4">
+                  <text class="hover:underline">11:00 AM - 8:00 PM</text>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <Footer.Title title="legal" />
-            <Footer.LinkGroup col>
-              <Footer.Link href="/">Privacy Policy</Footer.Link>
-              <Footer.Link href="/">Licensing</Footer.Link>
-              <Footer.Link href="/">Terms & Conditions</Footer.Link>
-            </Footer.LinkGroup>
-          </div>
-          <div>
-            <Footer.Title title="Contact Us" />
-            <Footer.LinkGroup col>
-              <Footer.Title title="Phone: 000-0000000" />
-              <Footer.Title title="Email: xxxxxx@gmail.com" />
-              <Footer.Title title="Address: 2, Lebuh Acheh, George Town, 10300 George Town, Pulau Pinang" />
-            </Footer.LinkGroup>
-          </div>
-          <div>
-            <Footer.Title title="Operating Hours:" />
-            <Footer.Title title="Monday - Friday" />
-            <Footer.Title title="8:00am - 5:00pm" />
-            <Footer.Title title="Saturday" />
-            <Footer.Title title="8:00am - 1:00pm" />
-            <Footer.Title title="Sunday" />
-            <Footer.Title title="Closed" />
+
+          <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
+              © 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
+              Reserved.
+            </span>
           </div>
         </div>
-        <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright by="Flowbite™" href="#" year={2022} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center"></div>
-        </div>
-      </div>
-    </Footer>
+      </footer>
     </div>
   );
 }

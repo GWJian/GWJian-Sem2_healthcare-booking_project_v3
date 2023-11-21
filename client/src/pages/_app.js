@@ -45,14 +45,13 @@ export default function App({ Component, pageProps }) {
   //================ Role End =================
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>
-        <Nav/>
-        <Component {...pageProps}/>
-
-        {/* if doctor hide Footer */}
-        {auth && auth.user.role === "doctor" ? null : <FooterSitemapLinks />}
-      </div>
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <div className="lg:flex lg:flex-col min-h-screen">
+          <Nav />
+          <Component {...pageProps} className="flex-grow" />
+          {auth && auth.user.role === "doctor" ? null : <FooterSitemapLinks /> }
+          
+        </div>
+      </QueryClientProvider>
   );
 }

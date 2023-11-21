@@ -4,7 +4,7 @@ import { IconCash } from "@tabler/icons-react";
 
 export default function Border() {
   return (
-    <div className="border-2 border-blue-900 rounded-tl-3xl rounded-br-3xl flex flex-col justify-between w-full h-full md:flex-row md:h-5/6">
+    <div className="border-2 border-blue-900 rounded-tl-3xl rounded-br-3xl flex flex-col justify-between w-full h-full md:flex-row md:h-5/6  ">
       <div className="w-full md:w-1/2 text-blue-800 px-6 md:px-12 py-6 md:py-12">
         <div className="flex justify-left">
           <IconCash className="w-1/2 md:w-24 h-auto" />
