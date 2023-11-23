@@ -60,10 +60,10 @@ export default function FooterSitemapLinks() {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                  <text class="hover:underline">Phone: 000-000-0000</text>
+                  <text class="hover:underline">Phone: (012) 123-4567</text>
                 </li>
                 <li class="mb-4">
-                  <text class="hover:underline">Email: xxxxx@gmail.com</text>
+                  <text class="hover:underline">Email: techcenterdentist@gmail.com</text>
                 </li>
                 <li class="mb-4">
                   <text class="hover:underline">
