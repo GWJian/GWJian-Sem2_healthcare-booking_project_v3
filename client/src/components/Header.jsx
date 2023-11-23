@@ -49,7 +49,7 @@ export default function Header() {
               )}
             </button>
           </div>
-          <p className="text-white text-xl mt-5">OR CALL (000) XXX-XXXX</p>
+          <p className="text-white text-xl mt-5">OR CALL (012) 123-4567</p>
         </div>
       </header>
     </div>

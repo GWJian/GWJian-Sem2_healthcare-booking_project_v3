@@ -53,7 +53,7 @@ export default function Nav() {
                 <Navbar.Link href="/">Homepage</Navbar.Link>
               )}
               <Navbar.Link href="/profile">Profile</Navbar.Link>
-              {(user?.role === "customer" || user?.role === "admin") && (
+              {(user?.role === "customer") && (
                 <Navbar.Link href="/appoiment">Appointment</Navbar.Link>
               )}
               {user?.role === "admin" && (

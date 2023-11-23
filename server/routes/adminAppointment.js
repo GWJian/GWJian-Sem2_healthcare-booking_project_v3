@@ -151,7 +151,7 @@ const notificationEmail = (userEmail, appointment, doctorDetail) => {
   let mailGenerator = new Mailgen({
     theme: "default",
     product: {
-      name: "E-Healthcare",
+      name: "TECH CENTER DENTISTS",
       link: "https://mailgen.js/",
     },
   });
@@ -159,7 +159,7 @@ const notificationEmail = (userEmail, appointment, doctorDetail) => {
   let response = {
     body: {
       name: appointment.customer.username,
-      intro: appointment.status,
+      intro: "Your appoitment have been " + appointment.status,
       table: {
         data: [
           {
