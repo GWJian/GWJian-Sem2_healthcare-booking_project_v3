@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is developed as a part of a school assignment for the 2nd semester. It aims to provide a platform for booking healthcare services efficiently.
+The Healthcare Booking Project is a user-friendly platform designed to streamline the process of scheduling appointments for patients and doctors alike. With our intuitive interface, patients can easily make appointments, while doctors have the flexibility to accept or decline appointments based on their availability and preferences. This project aims to enhance the efficiency and convenience of healthcare booking for both patients and medical professionals.
 
 ## Features
 
